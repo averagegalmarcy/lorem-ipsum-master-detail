@@ -1,19 +1,21 @@
 <template>
-    <ul>
-      <li>
+    <div>
         <IpsumList
         :ipsums="ipsums"
         :onSelect="handleSelect"/>
         <Ipsum v-if="selected"
         :ipsum="selected"/>
-      </li>
-    </ul>
+        <AddIpsum 
+        :onAdd="handleAdd"
+        :ipsumTypes="ipsumTypes"/>
+    </div>
 </template>
 
 <script>
 import ipsumsApi from '../../services/IpsumsApi.js'; 
 import Ipsum from './Ipsum.vue'; 
 import IpsumList from './IpsumList.vue'; 
+import AddIpsum from './AddIpsum'; 
 export default {
   data() {
     return {
@@ -23,21 +25,32 @@ export default {
   },
   components: {
     IpsumList,
+    AddIpsum,
     Ipsum
+  },
+  computed: {
+    ipsumTypes() {
+      const types = []; 
+      this.ipsums.forEach(ipsum => {
+        if(!types.includes(ipsum.type)) {
+          types.push(ipsum.type); 
+        }
+      });
+      return types;
+    }
   },
   methods: {
     handleSelect(ipsum) {
-      console.log(ipsum);
       this.selected = ipsum;
+    },
+    handleAdd(ipsum) {
+      this.ipsum.push(ipsum);
+      this.handleSelect(ipsum);
     }
   } 
-}; 
+};
+
 </script>
 <style>
-li {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(card-size, 4fr));
-  list-style-type: none;
-}
 </style>
 

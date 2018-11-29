@@ -22,5 +22,10 @@ export default {
 </script>
 
 <style>
-
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  list-style-type: none;
+  grid-gap: 10px; 
+}
 </style>

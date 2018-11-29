@@ -1,18 +1,41 @@
 <template>
-    <ul>
-        <AddIpsum/>
-        <p> Hello I am the Add Ipsum</p>
-    </ul>
+  <section>
+    <div v-if="!show">
+      <button @click="show = true"> Add an Author</button>
+    </div>
+    <div v-else>
+      <h2> Add a new Author </h2>
+      <IpsumForm 
+        :ipsumTypes="ipsumTypes"
+        :onAdd="handleAdd"
+        :onCancel="() => show = false"/>
+    </div>
+  </section>
 </template>
 
 <script>
-// import Ipsum from './Ipsum'; 
+import IpsumForm from './IpsumForm'; 
 
 export default {
-
-}; 
+  data() {
+    return {
+      show:false
+    };
+  }, 
+  components: {
+    IpsumForm
+  }, 
+  props: {
+    ipsumTypes: Array,
+    onAdd: Function
+  }, 
+  methods: {
+    handleAdd(ipsum) {
+      this.show = false;
+      this.onAdd(ipsum);
+    }
+  }
+  
+};
 </script>
 
-<style>
-
-</style>

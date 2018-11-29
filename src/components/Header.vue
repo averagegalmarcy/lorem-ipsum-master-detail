@@ -1,18 +1,13 @@
 <template>
-    <ul>
-        <Header/>
-        <p> Hello I am the Header</p>
-    </ul>
+    <header>
+      <h1> Please Select an Author! </h1>
+    </header>
 </template>
 
-<script>
-// import Ipsum from './Ipsum'; 
-
-export default {
-
-}; 
-</script>
-
-<style>
-
+<style> 
+header {
+  text-align:center;
+  text-shadow: 1px 2px 1px grey; 
+  
+}
 </style>

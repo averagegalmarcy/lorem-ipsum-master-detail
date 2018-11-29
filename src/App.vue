@@ -1,22 +1,23 @@
 <template>
   <div id="app">
 
-    <!-- <Header/>
-    <AddIpsum/> -->
-    <Ipsums />
+    <Header/>
+
+    <Ipsums/>
+
   </div>
 </template>
 
 
 <script>
-// import Ipsum from '../data.js'; 
+// import ipsum from '../data.js'; 
 import Ipsums from './components/Ipsums'; 
-// import Header from './components/Header'; 
+import Header from './components/Header'; 
 
 export default {
   components: {
-    //Header
-    Ipsums,
+    Header,
+    Ipsums
   }, 
 }; 
 </script>
