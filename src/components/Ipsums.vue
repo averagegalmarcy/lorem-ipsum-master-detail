@@ -1,11 +1,13 @@
 <template>
-      <div>
+    <ul>
+      <li>
         <IpsumList
         :ipsums="ipsums"
         :onSelect="handleSelect"/>
         <Ipsum v-if="selected"
         :ipsum="selected"/>
-      </div>
+      </li>
+    </ul>
 </template>
 
 <script>
@@ -31,4 +33,11 @@ export default {
   } 
 }; 
 </script>
+<style>
+li {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(card-size, 4fr));
+  list-style-type: none;
+}
+</style>
 
