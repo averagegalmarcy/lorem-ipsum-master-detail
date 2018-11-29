@@ -25,7 +25,6 @@ export default {
     IpsumForm
   }, 
   props: {
-    // ipsumTypes: Array,
     onAdd: Function
   }, 
   methods: {

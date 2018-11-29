@@ -1,26 +1,18 @@
 <template>
   <form @submit.prevent="onAdd(ipsum)">
     <label>
-      <span> Name </span>
-      <input v-model="ipsum.name">
+      <span> Author </span>
+      <input v-model="ipsum.author">
     </label>
     <label> 
       <span> Title: </span>
       <input v-model="ipsum.title">
     </label>
-    <!-- <label> 
-      <span> Category </span>
-      <select v-model="ipsum.category">
-        <option value="" disabled>Select a Category</option>
-        <option
-          v-for="type in ispumTypes"
-          v-bind:key="type"
-          v-bind:value="type">
-          {{category}}
-        </option>
-      </select>
-    </label> -->
-     <label> 
+    <label> 
+      <span> Date Published </span>
+      <input type="date" v-model="ipsum.publishOn"/>
+    </label>
+    <label> 
       <span> Ipsum </span>
       <textarea v-model.trim="ipsum.body"></textarea>
     </label>
@@ -37,17 +29,16 @@ export default {
   data() {
     return {
       ipsum: {
-        name:'', 
-        title: '',
-        // category: '',
-        body:'', 
+        author:'', 
+        title: '', 
+        body:'',
+        pubishedOn:''  
       }
     }; 
   }, 
   props: {
-    // ispumTypes: Array,
     onAdd: Function, 
-    onCancel: Function,  
+    onCancel: Function  
   }
 };
 </script>
@@ -65,7 +56,7 @@ label {
       width: 90px;
     }
   textarea, input, select {
-      width: 200px;
+      width: 300px;
     }
   textarea {
       height: 75px;

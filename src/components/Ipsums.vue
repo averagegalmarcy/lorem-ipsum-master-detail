@@ -28,17 +28,6 @@ export default {
     AddIpsum,
     Ipsum
   },
-  // computed: {
-  //   ipsumTypes() {
-  //     const types = []; 
-  //     this.ipsums.forEach(ipsum => {
-  //       if(!types.includes(ipsum.type)) {
-  //         types.push(ipsum.type); 
-  //       }
-  //     });
-  //     return types;
-  //   }
-  // },
   methods: {
     handleSelect(ipsum) {
       this.selected = ipsum;
@@ -46,6 +35,7 @@ export default {
     handleAdd(ipsum) {
       this.ipsums.push(ipsum);
       this.handleSelect(ipsum);
+      console.log(ipsum); 
     }
   } 
 };
