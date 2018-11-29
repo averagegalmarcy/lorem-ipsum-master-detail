@@ -10,7 +10,6 @@
 
 
 <script>
-// import ipsum from '../data.js'; 
 import Ipsums from './components/Ipsums'; 
 import Header from './components/Header'; 
 
