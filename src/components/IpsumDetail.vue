@@ -3,7 +3,6 @@
         <li>
           <h4> Author: {{ipsum.author}}</h4>
           <p>Title: {{ipsum.title}}</p>
-          <p> Date Published: {{ipsum.publishedOn}}</p>
           <p> Category {{ipsum.category}}</p>
           <p v-html="ipsum.body"></p>
         </li>

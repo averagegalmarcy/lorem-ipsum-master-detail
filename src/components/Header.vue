@@ -7,7 +7,7 @@
 <style> 
 header {
   text-align:center;
-  text-shadow: 1px 2px 1px grey; 
+  color: white; 
 
 }
 </style>

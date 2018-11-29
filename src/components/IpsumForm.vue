@@ -4,13 +4,13 @@
       <span> Author </span>
       <input v-model="ipsum.author">
     </label>
+    <label>
+      <span> Category </span>
+      <input v-model="ipsum.category">
+    </label>
     <label> 
       <span> Title: </span>
       <input v-model="ipsum.title">
-    </label>
-    <label> 
-      <span> Date Published </span>
-      <input type="date" v-model="ipsum.publishOn"/>
     </label>
     <label> 
       <span> Ipsum </span>
@@ -30,11 +30,11 @@ export default {
     return {
       ipsum: {
         author:'', 
+        category: '', 
         title: '', 
-        body:'',
-        pubishedOn:''  
+        body:''
       }
-    }; 
+    };
   }, 
   props: {
     onAdd: Function, 

@@ -30,12 +30,11 @@ export default {
   },
   methods: {
     handleSelect(ipsum) {
-      this.selected = ipsum;
+      this.selected = ipsum === this.selected ? null : ipsum;
     },
     handleAdd(ipsum) {
       this.ipsums.push(ipsum);
       this.handleSelect(ipsum);
-      console.log(ipsum); 
     }
   } 
 };
