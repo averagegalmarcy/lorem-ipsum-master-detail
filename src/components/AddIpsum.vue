@@ -6,7 +6,6 @@
     <div v-else>
       <h2> Add a new Author </h2>
       <IpsumForm 
-        :ipsumTypes="ipsumTypes"
         :onAdd="handleAdd"
         :onCancel="() => show = false"/>
     </div>
@@ -26,7 +25,7 @@ export default {
     IpsumForm
   }, 
   props: {
-    ipsumTypes: Array,
+    // ipsumTypes: Array,
     onAdd: Function
   }, 
   methods: {
@@ -38,4 +37,10 @@ export default {
   
 };
 </script>
+<style>
+section {
+  display: flex;
+  justify-content: center;
+}
+</style>
 

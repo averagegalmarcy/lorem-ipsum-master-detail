@@ -1,17 +1,25 @@
 <template>
   <form @submit.prevent="onAdd(ipsum)">
     <label>
-      <span> Author Name: </span>
+      <span> Name </span>
       <input v-model="ipsum.name">
     </label>
     <label> 
       <span> Title: </span>
       <input v-model="ipsum.title">
     </label>
-    <label> 
-      <span> Category: </span>
-      <input v-model="ipsum.category">
-    </label>
+    <!-- <label> 
+      <span> Category </span>
+      <select v-model="ipsum.category">
+        <option value="" disabled>Select a Category</option>
+        <option
+          v-for="type in ispumTypes"
+          v-bind:key="type"
+          v-bind:value="type">
+          {{category}}
+        </option>
+      </select>
+    </label> -->
      <label> 
       <span> Ipsum </span>
       <textarea v-model.trim="ipsum.body"></textarea>
@@ -31,13 +39,13 @@ export default {
       ipsum: {
         name:'', 
         title: '',
-        category: '',
+        // category: '',
         body:'', 
       }
     }; 
   }, 
   props: {
-    ispumTypes: Array,
+    // ispumTypes: Array,
     onAdd: Function, 
     onCancel: Function,  
   }
@@ -46,7 +54,7 @@ export default {
 <style  scoped>
 section {
   background: #aaa;
-  padding: 10px;
+  padding: 10px; 
 }
 label {
     display: flex;
@@ -62,4 +70,7 @@ label {
   textarea {
       height: 75px;
     }
+  button {
+    display: block; 
+  }
 </style>
