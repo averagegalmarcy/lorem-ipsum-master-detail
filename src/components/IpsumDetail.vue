@@ -1,15 +1,18 @@
 <template>
     <ul>
-        <IpsumDetail/>
-        <p> Hello I am Ipsum Detail </p>
+        <li>
+          <h4>{{ipsum.authorURL}}</h4>
+          <p v-html="ipsum.body"></p>
+        </li>
     </ul>
 </template>
 
 <script>
-// import Ipsum from './Ipsum'; 
 
 export default {
-
+  props: {
+    ipsum: Object
+  }
 }; 
 </script>
 

@@ -1,25 +1,23 @@
 <template>
     <li>
-        <h3>{{ipsum.title}}</h3>
-        <div class="info">
-            <h3>{{ipsum.author}}</h3>
-            <p>{{ipsum.category}}</p>
-            <p>{{ipsum.authorURL}}</p>
-            <p>{{ipsum.publishedOn}}</p>
-            <p>{{ipsum.body}}</p>
-        </div>
+        <h3>Author: {{ipsum.author}}</h3>
+        <IpsumDetail 
+        :ipsum="ipsum"/>
     </li>
 </template>
 
 <script>
+import IpsumDetail from './IpsumDetail'; 
 export default {
   props: {
     ipsum: Object
+  }, 
+  components: {
+    IpsumDetail
   }
 }; 
 </script>
 
 <style>
-
 </style>
 

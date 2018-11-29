@@ -1,18 +1,17 @@
 <template>
-    <ul>
-        <Ipsum/>
-        <p> Hello I am Ipsums Item</p>
-    </ul>
+    <li>
+        <div class="info">
+            <h3>{{ipsum.title}}</h3>
+            <p>{{ipsum.category}}</p>
+        </div>
+    </li>
 </template>
 
 <script>
-// import Ipsum from './Ipsum'; 
 
 export default {
-
+  props: {
+    ipsum: Object
+  }
 }; 
 </script>
-
-<style>
-
-</style>
