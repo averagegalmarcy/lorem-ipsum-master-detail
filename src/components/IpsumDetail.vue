@@ -22,4 +22,8 @@ export default {
 img {
   max-width: 100px; 
 }
+
+h4 {
+  text-decoration: bold; 
+}
 </style>

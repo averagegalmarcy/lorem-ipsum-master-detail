@@ -22,10 +22,16 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
 body {
   background-image: url('http://kesieuthi.top/wp-content/uploads/2018/07/modern-minimalist-art-minimalist-large-print-modern-wall-art-mountains-by-modern-minimalist-art-for-sale.jpg'); 
   background-repeat: no-repeat;
   background-size: cover; 
   margin: 0; 
+}
+
+* {
+  font-family: 'Abel', sans-serif;
 }
 </style>

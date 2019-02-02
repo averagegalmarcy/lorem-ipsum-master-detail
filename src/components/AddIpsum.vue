@@ -41,5 +41,12 @@ section {
   display: flex;
   justify-content: center;
 }
+
+button {
+  margin-top: 50px;
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 50px;
+}
 </style>
 
