@@ -1,11 +1,11 @@
 <template>
   <form @submit.prevent="onAdd(ipsum)">
     <label>
-      <span> Author </span>
+      <span> Author: </span>
       <input v-model="ipsum.author">
     </label>
     <label>
-      <span> Category </span>
+      <span> Category: </span>
       <input v-model="ipsum.category">
     </label>
     <label> 
@@ -13,7 +13,7 @@
       <input v-model="ipsum.title">
     </label>
     <label> 
-      <span> Ipsum </span>
+      <span> Ipsum: </span>
       <textarea v-model.trim="ipsum.body"></textarea>
     </label>
     <label>
@@ -45,11 +45,12 @@ export default {
 <style  scoped>
 section {
   background: #aaa;
-  padding: 10px; 
+  padding: 10px;
 }
 label {
     display: flex;
     padding: 3px;
+    color: white; 
   }
   span {
       display: inline-block;
