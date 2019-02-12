@@ -1,5 +1,7 @@
 # lorem-ipsum-master-detail
 
+
+
 ## Project setup
 ```
 npm install
